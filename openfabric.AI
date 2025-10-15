@@ -1,0 +1,16 @@
+import requests
+import time
+API_URL = "https://testnet.openfabric.ai/api/apps"
+APP_ID = "your_app_id_here"
+
+def check_deployment():
+    while True:
+        response = requests.get(f"{API_URL}/{APP_ID}/status")
+        status = response.json().get("status")
+        print(f"Deployment status: {status}")
+        if status in ["deployed", "failed"]:
+            break
+        time.sleep(10)
+
+if __name__ == "__main__":
+    check_deployment()
