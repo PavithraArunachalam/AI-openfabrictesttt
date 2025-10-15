@@ -1,0 +1,46 @@
+Openfabric AI is a decentralized platform designed to let developers and businesses build, deploy, and use AI services in a secure, trustable environment. Its key features include:
+Decentralized AI Operating System: Runs on a peer-to-peer network with consensus protocols to ensure reliability and fault tolerance.
+AI Marketplace & Developer Tools: Provides SDKs, CLI tools, and a marketplace for easy deployment and discovery of AI apps.
+Trusted Execution Environment (TEE): Keeps sensitive data and AI model execution secure.
+Ontology & Standardization: Ensures AI services, datasets, and pipelines follow common input/output formats for interoperability.
+Governance & Token Economy: Supports voting, staking, and rewards via OFN tokens.
+Scalability & Resource Sharing: Enables infrastructure providers to offer computing power and data providers to share datasets.
+Potential Testing Challenges:
+Testing distributed consensus and node failures.
+Validating AI app interoperability and ontology compliance.
+Ensuring TEE security and data privacy.
+Verifying governance workflows and token economics.
+Checking platform scalability, performance, and fault recovery.
+
+Positive Scenarios (Expected Behavior):
+User can register an AI app with correct metadata.
+AI app can be discovered using search and filters.
+Payments using OFN tokens succeed for app usage.
+SDK/CLI correctly deploys and updates an AI app.
+
+Negative Scenarios (Error Handling):
+Registration fails if required metadata is missing.
+Deployment fails if AI app violates ontology rules.
+Payments fail if OFN balance is insufficient.
+Marketplace shows meaningful errors when a node is offline.
+
+Bug: AI app deployment fails intermittently on testnet.
+Severity: High
+Steps to Reproduce:
+Use SDK to deploy a new AI app.
+Monitor deployment status.
+Deployment fails in 1 of 5 attempts.
+Potential Impact: Delays in publishing AI apps; could affect trust in marketplace.
+
+Identify & Log: Record failure details, steps, inputs, and timestamps.
+Check Dependencies: Verify network, node availability, and testnet health.
+Compare Environments: Test in local vs. testnet environment.
+Isolate Component: Narrow down if the issue is SDK, marketplace, or consensus.
+Consult Documentation / Support: Check Openfabric docs for version updates or known issues.
+Implement Fix & Retest: Adjust configuration, retry test, and log results.
+
+Explaining a Technical Issue to a Non-Technical Stakeholder ?
+Imagine our AI marketplace as a library. Sometimes, when someone adds a new book (AI app),
+the catalog system doesn’t immediately recognize it due to network delays or system rules.
+We’re investigating why the registration fails occasionally, fixing it so every book appears 
+in the catalog reliably, ensuring our users can always find and use new AI services
